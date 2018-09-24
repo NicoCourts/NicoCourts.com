@@ -1,0 +1,36 @@
+div#navbar{
+	display:flex;
+	justify-content:center;
+	background-color: #FFE0B1;
+	font-size: large;
+	color: black;
+}
+div#footer{
+	box-sizing: border-box;
+	width: 100%;
+	font-size: small;
+	text-align: center;
+	margin: 10px;
+}
+span{
+	margin: 0 20px;
+	padding: 3px 10px;
+}
+li:not(.selected) span:hover{
+	color: #136BCC;
+	background-color: #FFD69D;
+}
+li.selected span{
+	color: #CC3F13;
+}
+li{
+	display:inline;
+
+}
+ul{
+	margin: 3px;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}

@@ -1,0 +1,30 @@
+div.wrap{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+div.contact{
+    text-align: center;
+}
+div.section{
+    display:flex;
+    justify-content: center;
+    flex-direction:row;
+    width: 100%;
+    margin: 15px;
+    box-sizing: border-box;
+}
+div.content{
+    width: 80%;
+}
+span{
+    display: inline-block;
+    vertical-align: middle;
+}
+h3{
+    margin: 0 20px;
+}
+p{
+    margin: 0;
+}
