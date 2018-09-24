@@ -18,6 +18,9 @@ div.section{
 div.content{
     width: 80%;
 }
+div.title{
+    text-align: right;
+}
 span{
     display: inline-block;
     vertical-align: middle;
