@@ -41,3 +41,13 @@ div.stack{
 	float: left;
 	width:50%;
 }
+a:link{
+	color: #CC3F13;
+	text-decoration: none;
+}
+a:visited{
+	color: #CC3F13;
+}
+a:hover{
+	color: #136BCC;
+}
