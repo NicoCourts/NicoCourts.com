@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/nicocourts
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://nicocourts.com
+  * I am nicocourts (https://keybase.io/nicocourts) on keybase.
+  * I have a public key with fingerprint 0F93 F891 2BFB D30F F790  8B0D 2A80 D7A8 CFB0 2AF3
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010135c2298425b10ae3183fa74485d60fe5449e2e9513344e48363f0957d372a4800a",
+            "fingerprint": "0f93f8912bfbd30ff7908b0d2a80d7a8cfb02af3",
+            "host": "keybase.io",
+            "key_id": "2a80d7a8cfb02af3",
+            "kid": "010135c2298425b10ae3183fa74485d60fe5449e2e9513344e48363f0957d372a4800a",
+            "uid": "01d065575f03e14ac563440c6a09eb00",
+            "username": "nicocourts"
+        },
+        "revoke": {
+            "sig_ids": [
+                "d96adfddee25c900a0e090406bd7993c7d6b708d4060de311ca2a91729500bd80f"
+            ]
+        },
+        "service": {
+            "hostname": "nicocourts.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1489944724,
+    "expire_in": 157680000,
+    "prev": "b0cea76149094bcfe88055946a590296adec9a594ec3bc574448b63239ae3e49",
+    "seqno": 9,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.66
+Comment: https://keybase.io/crypto
+
+yMJrAnicrVJbbBVFGD4FW7GJ0kDiAySWjCAUCs7uzOzOHCUmxtLwIImoCVjMyVwP
+m5bdw+6egw0iFRKsRdEQNRqvBLk8tQ8VeDgEiikaS6zRRMTEFi1RwEQM9aH2NCbO
+NvCEjz7NzD/f/33ffxm+d26use6ja9e/aNp+sqnuwrmpcm7T6NBbO4GIVDfI7wSd
+evbQXUonaaEzUCAPoAMdRKTrMopdIhzINXIoMtzHmBLlQaMJxky7mhEHIYw1pshD
+BjLiK+S7HFMIOWgFJgiLOi7FQZhmtIYhQ5njCiMUgsb4DFIBlcspVD6n0gjocoNs
+4tYoyTKsOcETvSaIbMw+CrP2/gP/P/su36JT0CPEJwYi7WAuiWdzoPQ4ZFpAmAET
+HYd8m7boMJCRjMpxmoBdrSDWlahTZ51NgqK1nYB8B1DM48oopbVLJLNSUEMGMfSE
+8hlD0lee8CFVNgKVte5I7nLm+C4jEApFoQHPW26rWQnkLHnWpzv018hom/VWiqPU
+Rrrs39Y0LSX5zFfaXcrAO7Qo3KIpiCBUdk42o6LjJIhCkHcsUqZBxutgyhjGvotb
+gX6hFMS6EGQI4nu2WRBmOrpiKQWUmvuegxlkWEijKYWEMOxxwqCbVa4ls3esJRKS
+2JFgKjzkImanpDEDWWHbwwjkmbXJi5bSti7kaTnWYNfnQ1vuytU15hrq52T7m2u8
+p+n2VrfMv7s2p+/Ghq9nDu35dWKV2XD/k+bF6MCK4er1j49MXazUf3+8483yX6u+
+7e6/iDZ3zJxa0NJczJ9f/9WfteZfRq4sWvJuf8OyiemD1555cP07P57ud8ZJ++pX
++3te7ts9Oe/maz8sXjvAll7u+nBe+/TDbH914qEtYNPq0Zaehb2PjY71nmg4vvSn
+uqf+eGnw6uC6D9LmR57t3ZefLo/t7nvj/Cc39/4+WV0+0MM/e+8VMPfR9pGfa/vo
+mZknHnj90LC/6MbVbwbva6sNDl2pTF1qO7W2cLjt3NG/i03h2xdWLvyyOrb/gLsD
+j6wcvzT++PzJzf/UD/z2HX1u45KwxA8/vezThtry6sGzZ45tXPH+Ov0vLT1jMg==
+=d4MR
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/nicocourts
+
+==================================================================
+

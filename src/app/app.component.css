@@ -29,6 +29,7 @@ li{
 }
 ul{
 	margin: 3px;
+	padding: 0;
 }
 a{
 	text-decoration: none;
