@@ -19,8 +19,7 @@ before_script:
 
 script: 
   - ng test --watch false -c
-  - ng build 
-  - docker-compose build
+  - docker build -t nicocourts/website . 
 
 deploy:
   provider: script
