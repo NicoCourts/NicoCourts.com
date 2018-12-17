@@ -8,17 +8,17 @@ import { BlogComponent } from './blog/blog.component';
 import { LinksComponent } from './links/links.component';
 
 const routes: Routes = [
-	{ path: '', redirectTo: '/home', pathMatch: 'full' },
-	{ path: 'home', component: HomeComponent },
-	{ path: 'resume', component: ResumeComponent },
-	{ path: 'blog', component: BlogComponent },
-	{ path: 'courses', component: CoursesComponent },
-	{ path: 'links', component: LinksComponent }
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'home', component: HomeComponent },
+    { path: 'resume', component: ResumeComponent },
+    { path: 'blog', component: BlogComponent },
+    { path: 'courses', component: CoursesComponent },
+    { path: 'links', component: LinksComponent }
 ];
 
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]  
+  exports: [ RouterModule ],
   })
 
 export class AppRoutingModule { }
