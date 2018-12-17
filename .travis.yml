@@ -20,9 +20,4 @@ before_script:
 script: 
   - ng test --watch false -c
   - docker build -t nicocourts/website . 
-
-deploy:
-  provider: script
-  script: docker_push
-  on:
-    branch: Live
+  - echo "$DOCKER_PASSWORD" | docker login -u "nicocourts" --password-stdin
