@@ -19,7 +19,8 @@ before_script:
 
 script: 
   - ng test --watch false -c
-  - ng build -bh "https://4n1.co/"
+  - ng build 
+  - docker-compose build
 
 deploy:
   provider: script

@@ -1,6 +1,6 @@
 FROM node:latest
 
-ENV APP_ROOT /app
+ENV APP_ROOT /
 
 RUN mkdir $APP_ROOT
 WORKDIR $APP_ROOT
