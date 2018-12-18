@@ -21,3 +21,4 @@ script:
   - ng test --watch false -c
   - docker build -t nicocourts/website . 
   - echo "$DOCKER_PASSWORD" | docker login -u "nicocourts" --password-stdin
+  - docker push nicocourts/website:latest
