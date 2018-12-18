@@ -25,3 +25,5 @@ COPY --from=builder /ng-app/dist/website /usr/share/nginx/html
 COPY .well-known /usr/share/nginx/html
 
 CMD ["nginx", "-g", "daemon off;"]
+
+EXPOSE 80
