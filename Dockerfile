@@ -7,7 +7,6 @@ COPY package.json package-lock.json ./
 RUN npm i && mkdir /ng-app && mv ./node_modules ./ng-app
 
 WORKDIR /ng-app
-
 COPY . .
 
 # Build the project
@@ -18,6 +17,9 @@ FROM nginx:latest
 
 # Copy in the nginx config files
 COPY nginx/default.conf /etc/nginx/conf.d
+
+# Copy in the dhparams
+COPY dhparam/dhparam-4096.pem /etc/ssl/certs/dhparam-4096.pem
 
 # Copy in live files
 RUN rm -rf /usr/share/nginx/html/*
