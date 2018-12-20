@@ -24,6 +24,6 @@ COPY dhparam/dhparam-4096.pem /etc/ssl/certs/dhparam-4096.pem
 # Copy in live files
 RUN rm -rf /usr/share/nginx/html/*
 COPY --from=builder /ng-app/dist/website /usr/share/nginx/html
-COPY .well-known /usr/share/nginx/html
+#COPY .well-known /usr/share/nginx/html
 
 CMD ["nginx", "-g", "daemon off;"]
