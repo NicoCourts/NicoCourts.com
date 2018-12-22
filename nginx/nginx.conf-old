@@ -31,22 +31,27 @@ http {
 		ssl_certificate_key 	/etc/letsencrypt/live/nicocourts.com/privkey.pem;
 		ssl_protocols			TLSv1.2 TLSv1.1 TLSv1;
 
-		listen	www.nicocourts.com:80;
-		listen	www.nicocourts.com:443 ssl http2;
+		listen	80;
+		listen [::]:80;
+		listen	443 ssl http2;
+		listen [::]:443 ssl http2;
 		
 		return 301 https://nicocourts.com$request_uri;
 	}
 
 	## Redirect all plaintext connects to TLS
 	server {
-       		listen         nicocourts.com:80;
-       		server_name    nicocourts.com;
-       		return         301 https://nicocourts.com$request_uri;
+       		listen			80;
+			listen			[::]:80;
+       		server_name    	nicocourts.com;
+       		return         	301 https://nicocourts.com$request_uri;
 	}
 
 	##SSL Connections
 	server {
-    	listen   nicocourts.com:443 ssl http2;
+		listen 		443 ssl http2;
+    	listen   	[::]:443 ssl http2;
+		server_name	nicocourts.com
     		
 		## SSL Security Config 
 		#ssl on; 
