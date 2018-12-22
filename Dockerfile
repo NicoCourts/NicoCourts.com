@@ -17,6 +17,7 @@ FROM nginx:latest
 
 # Copy in the nginx config files
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
+RUN rm -rf /etc/nginx/conf.d/*
 
 # Copy in the dhparams
 COPY dhparam/dhparam-4096.pem /etc/ssl/certs/dhparam-4096.pem
