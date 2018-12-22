@@ -16,7 +16,8 @@ RUN $(npm bin)/ng build --prod
 FROM nginx:latest
 
 # Copy in the nginx config files
-COPY nginx/default.conf /etc/nginx/conf.d
+#COPY nginx/default.conf /etc/nginx/conf.d
+COPY nginx/nginx.conf-old /etc/nginx/nginx.conf
 
 # Copy in the dhparams
 COPY dhparam/dhparam-4096.pem /etc/ssl/certs/dhparam-4096.pem
