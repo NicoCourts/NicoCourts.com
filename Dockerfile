@@ -16,8 +16,7 @@ RUN $(npm bin)/ng build --prod
 FROM nginx:latest
 
 # Copy in the nginx config files
-#COPY nginx/default.conf /etc/nginx/conf.d
-COPY nginx/nginx.conf-old /etc/nginx/nginx.conf
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
 # Copy in the dhparams
 COPY dhparam/dhparam-4096.pem /etc/ssl/certs/dhparam-4096.pem
@@ -25,6 +24,6 @@ COPY dhparam/dhparam-4096.pem /etc/ssl/certs/dhparam-4096.pem
 # Copy in live files
 RUN rm -rf /usr/share/nginx/html/*
 COPY --from=builder /ng-app/dist/website /usr/share/nginx/html
-#COPY .well-known /usr/share/nginx/html
+COPY .well-known /usr/share/nginx/html
 
 CMD ["nginx", "-g", "daemon off;"]
