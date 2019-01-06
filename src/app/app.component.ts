@@ -8,22 +8,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 
-
-
 export class AppComponent {
-	title = 'website';
+    title = 'website';
 
-	router : Router;
+    router: Router;
 
-	constructor(private _router: Router) {
-		this.router = _router;
-	}
+    constructor(private _router: Router) {
+        this.router = _router;
+    }
 
-	sections : Section[] = [
-		{uri:'home', displayName:'Home'},
-		{uri:'resume', displayName:'Resume/CV'},
-		{uri:'blog', displayName:'Blog'},
-		{uri:'courses', displayName:'Coursework'}, 
-		{uri:'links', displayName:'Links'}
-	];
+    sections: Section[] = [
+        {uri: 'home', displayName: 'Home'},
+        {uri: 'resume', displayName: 'Resume/CV'},
+        {uri: 'blog', displayName: 'Blog'},
+        {uri: 'courses', displayName: 'Coursework'},
+        {uri: 'links', displayName: 'Links'}
+    ];
 }

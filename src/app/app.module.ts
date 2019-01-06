@@ -8,17 +8,19 @@ import { ResumeComponent } from './resume/resume.component';
 import { CoursesComponent } from './courses/courses.component';
 import { BlogComponent } from './blog/blog.component';
 import { LinksComponent } from './links/links.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
+    BlogComponent,
     HomeComponent,
     ResumeComponent,
     CoursesComponent,
-    BlogComponent,
     LinksComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],

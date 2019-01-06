@@ -1,4 +1,4 @@
 export class Section {
-	uri: string;
-	displayName: string;
+    uri: string;
+    displayName: string;
 }

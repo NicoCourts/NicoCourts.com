@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from './post';
+import { RestService } from '../rest.service';
+import { post } from 'selenium-webdriver/http';
 
 @Component({
   selector: 'app-blog',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
+  post: Post;
 
-  ngOnInit() {
+  constructor(public rest: RestService) {
+    this.rest.getPost('1265362629').subscribe((data: Post) => {
+      this.post = data;
+    });
   }
+
+  ngOnInit() {  }
 
 }
