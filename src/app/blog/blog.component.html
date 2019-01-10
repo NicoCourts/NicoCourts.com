@@ -1,4 +1,6 @@
-<div class='wrapper'>
-    <p>The blog component of the site will be updated in the future.</p>
-    <p>The url title for post with id {{post && post._id}} is {{post && post.title}}.</p>
+<div class='wrapper'>		
+    <div *ngFor="let p of postList" class="postBox">
+        <h3 class="postTitle">{{p.title}}</h3>
+        <div [ngClass]="p.isshort ? 'postBody-short' : 'postBody'" [innerHTML]="p.body"></div>
+        <div class="postFoot">A {{postType(p)}}post  by Nico<br />on {{posted(p)}}</div>
 </div>

@@ -3,7 +3,7 @@ export class Post {
         public _id:         number,
         public isshort:    boolean,
         public title:      string,
-        public urlitle:    string,
+        public urltitle:    string,
         public visible:    boolean,
         public date:       string,
         public body:       string

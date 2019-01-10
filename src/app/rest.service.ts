@@ -22,4 +22,8 @@ export class RestService {
   getPost(id: string): Observable<Post> {
     return this.http.get<Post>('https://api.nicocourts.com/post/1265362629');
   }
+
+  getPosts(): Observable<Post[]> {
+    return this.http.get<Post[]>('https://api.nicocourts.com/posts/');
+  }
 }

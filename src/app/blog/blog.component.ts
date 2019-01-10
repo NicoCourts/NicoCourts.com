@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from './post';
 import { RestService } from '../rest.service';
-import { post } from 'selenium-webdriver/http';
 
 @Component({
   selector: 'app-blog',
@@ -10,12 +9,33 @@ import { post } from 'selenium-webdriver/http';
 })
 export class BlogComponent implements OnInit {
 
-  post: Post;
+  postList: Post[];
 
+  // Read the API data and create a local data structure containing them
   constructor(public rest: RestService) {
-    this.rest.getPost('1265362629').subscribe((data: Post) => {
-      this.post = data;
+    this.rest.getPosts().subscribe((data: Post[]) => {
+      this.postList = data;
     });
+  }
+
+  postType(p: Post) : string {
+    if (p.isshort) {
+      return "short "
+    } else {
+      return ""
+    }
+  }
+
+  posted(p: Post) : string {
+    let d = new Date(Date.parse(p.date))
+    let options = { weekday: 'long', 
+                    year:    'numeric', 
+                    month:   'long', 
+                    day:     'numeric', 
+                    hour:    'numeric', 
+                    minute: 'numeric' 
+                  }
+    return d.toLocaleString("en-US", options)
   }
 
   ngOnInit() {  }
