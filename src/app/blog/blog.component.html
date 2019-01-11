@@ -1,6 +1,7 @@
 <div class='wrapper'>		
-    <div *ngFor="let p of postList" class="postBox">
-        <h3 class="postTitle">{{p.title}}</h3>
+    <div *ngFor="let p of postList" [ngClass]="p.isshort ? 'postBox-short' : 'postBox'">
+        <h3 *ngIf="!p.isshort" class="postTitle">{{p.title}}</h3>
         <div [ngClass]="p.isshort ? 'postBody-short' : 'postBody'" [innerHTML]="p.body"></div>
-        <div class="postFoot">A {{postType(p)}}post  by Nico<br />on {{posted(p)}}</div>
+        <div class="postFoot">{{posted(p)}}</div>
+        <div *ngIf="!p.isshort" class="readMore"><a href="/blog/{{p.urltitle}}">Click to read more...</a></div>
 </div>

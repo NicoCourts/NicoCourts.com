@@ -14,7 +14,7 @@ export class BlogComponent implements OnInit {
   // Read the API data and create a local data structure containing them
   constructor(public rest: RestService) {
     this.rest.getPosts().subscribe((data: Post[]) => {
-      this.postList = data;
+      this.postList = data.reverse();
     });
   }
 
@@ -33,9 +33,9 @@ export class BlogComponent implements OnInit {
                     month:   'long', 
                     day:     'numeric', 
                     hour:    'numeric', 
-                    minute: 'numeric' 
+                    minute:  'numeric' 
                   }
-    return d.toLocaleString("en-US", options)
+    return "Posted on " + d.toLocaleString("en-US", options)
   }
 
   ngOnInit() {  }

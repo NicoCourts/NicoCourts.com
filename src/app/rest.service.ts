@@ -5,7 +5,7 @@ import { map, catchError, tap } from 'rxjs/operators';
 import { Post } from './blog/post';
 
 
-const endpoint = 'https://api.nicocourts.com/';
+const endpoint = 'https://api.nicocourts.com';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':  'application/json'
@@ -20,10 +20,10 @@ export class RestService {
   constructor(private http: HttpClient) {  }
 
   getPost(id: string): Observable<Post> {
-    return this.http.get<Post>('https://api.nicocourts.com/post/1265362629');
+    return this.http.get<Post>(endpoint + '/post/' + id);
   }
 
   getPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>('https://api.nicocourts.com/posts/');
+    return this.http.get<Post[]>(endpoint + '/posts/');
   }
 }
