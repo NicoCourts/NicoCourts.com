@@ -9,6 +9,8 @@ import { CoursesComponent } from './courses/courses.component';
 import { BlogComponent } from './blog/blog.component';
 import { LinksComponent } from './links/links.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PostComponent } from './blog/post.component';
+import { BlogRoutingModule } from './blog/blog-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     ResumeComponent,
     CoursesComponent,
-    LinksComponent
+    LinksComponent,
+    PostComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BlogRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,6 +2,7 @@
     <div *ngFor="let p of postList" [ngClass]="p.isshort ? 'postBox-short' : 'postBox'">
         <h3 *ngIf="!p.isshort" class="postTitle">{{p.title}}</h3>
         <div [ngClass]="p.isshort ? 'postBody-short' : 'postBody'" [innerHTML]="p.body"></div>
+        <a href="/blog/{{p.urltitle}}"></a>
         <div class="postFoot">{{posted(p)}}</div>
         <div *ngIf="!p.isshort" class="readMore"><a href="/blog/{{p.urltitle}}">Click to read more...</a></div>
 </div>
