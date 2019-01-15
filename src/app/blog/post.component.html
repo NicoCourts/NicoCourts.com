@@ -1,3 +1,13 @@
-<p>
-  post works!
-</p>
+<div id="postWrapper">
+  <div class="flexbox">
+    <div><h1>{{post && post.title}}</h1></div>
+    <div id='dateSpan'>{{post && posted(post)}}</div>
+  </div>
+  <hr />
+  <div class="blogReturn"><a href="javascript:void(0)" (click)="goBack()">⇐ Return to blog listing</a></div>
+  <div id="postContent" [innerHTML]="post && post.body">
+  </div>
+  <div class="blogReturn"><a href="javascript:void(0)" (click)="goBack()">⇐ Return to blog listing</a></div>
+  <hr />
+</div>
+

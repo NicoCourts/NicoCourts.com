@@ -4,6 +4,7 @@ import { RestService } from '../rest.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-post',
@@ -13,12 +14,12 @@ import { Observable } from 'rxjs';
 
 export class PostComponent implements OnInit {
   private post$: Observable<Post>;
-  private post: Post;
+  post: Post;
 
   constructor(
-    private rest: RestService,
     private route: ActivatedRoute,
-    private service: RestService 
+    private service: RestService,
+    private location: Location
     ) {  }
 
   ngOnInit() {
@@ -30,6 +31,22 @@ export class PostComponent implements OnInit {
     this.post$.subscribe((data: Post) => {
       this.post = data;
     });
+  }
+
+  posted(p: Post) : string {
+    let d = new Date(Date.parse(p.date))
+    let options = { weekday: 'long', 
+                    year:    'numeric', 
+                    month:   'long', 
+                    day:     'numeric', 
+                    hour:    'numeric', 
+                    minute:  'numeric' 
+                  }
+    return d.toLocaleString("en-US", options)
+  }
+
+  goBack() {
+    this.location.back();
   }
 
 }

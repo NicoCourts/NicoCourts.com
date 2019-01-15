@@ -1,6 +1,6 @@
 <div id='navbar'>
 	<ul>
-		<li *ngFor="let section of sections" [class.selected]='this.router.url === "/"+section.uri'>
+		<li *ngFor="let section of sections" [class.selected]='isSelected(this.router.url, "/"+section.uri)'>
 			<a routerLink='/{{section.uri}}'><span><strong>{{section.displayName}}</strong></span></a>
 	</ul>
 </div>
