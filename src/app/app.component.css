@@ -39,7 +39,7 @@ a.nav{
 	div#navbar {
 		flex-direction: column;
 	}
-	li{
+	li.nav{
 		display: block;
 		text-align: center;
 	}
