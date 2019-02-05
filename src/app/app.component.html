@@ -1,12 +1,21 @@
 <div id='navbar'>
-	<ul>
-		<li *ngFor="let section of sections" [class.selected]='isSelected(this.router.url, "/"+section.uri)'>
-			<a routerLink='/{{section.uri}}'><span><strong>{{section.displayName}}</strong></span></a>
+	<ul class="nav">
+		<li class="nav" *ngFor="let section of sections" [class.selected]='isSelected(this.router.url, "/"+section.uri)'>
+			<a routerLink='/{{section.uri}}' class="nav"><span><strong>{{section.displayName}}</strong></span></a>
 	</ul>
 </div>
 <router-outlet></router-outlet>
 
 <div id='footer'>
 	All code and content &copy; Nico Courts<br />
-	Except where otherwise noted.
+	<span id="creditSpan" (click)="modalToggle()">Except where otherwise noted.</span>
+</div>
+
+<div id="overlay" [ngClass]="this.showModal" (click)="modalToggle()"></div>
+<div id="credits" [ngClass]="this.showModal">
+	<h3>Thanks to the following for their contributions to this site:</h3>
+	<ul>
+		<li>Background: <em>"What the Hex"</em> - <a href="https://www.toptal.com/designers/subtlepatterns/what-the-hex/">Angel Micevski</a></li>
+		<li>Website fonts (unicode fonts based on Donald Knuth's <em>Computer Modern</em> font family) provided by <a href="http://cm-unicode.sourceforge.net">Andrey V. Panov</a></li>
+	</ul>
 </div>

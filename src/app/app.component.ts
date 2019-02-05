@@ -11,9 +11,11 @@ import { Router } from '@angular/router';
 export class AppComponent {
     title = 'website';
 
+    showModal: string;
     router: Router;
 
     constructor(private _router: Router) {
+        this.showModal = "hidden";
         this.router = _router;
     }
 
@@ -28,4 +30,12 @@ export class AppComponent {
     isSelected(s1: string, s2: string) {
         return (s1.substring(0,5) === "/blog" && s2.substring(0,5) === "/blog") || s1 === s2
     }
+
+    modalToggle() {
+        if (this.showModal == "hidden") {
+          this.showModal = "show"
+        } else {
+          this.showModal = "hidden"
+        }
+      }
 }

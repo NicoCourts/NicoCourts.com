@@ -23,15 +23,15 @@ li:not(.selected) span:hover{
 li.selected span{
 	color: #CC3F13;
 }
-li{
+li.nav{
 	display:inline;
 
 }
-ul{
+ul.nav{
 	margin: 3px;
 	padding: 0;
 }
-a{
+a.nav{
 	text-decoration: none;
 	color: #000;
 }

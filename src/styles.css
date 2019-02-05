@@ -145,3 +145,45 @@ div.flexbox{
 	justify-content: space-between;
 	align-items: flex-end;
 }
+
+.hidden{
+	display: none;
+}
+
+.show{
+	display: block;
+}
+
+#creditSpan{
+	color: #CC3F13;
+}
+#creditSpan:hover{
+	color: #136BCC;
+}
+
+#overlay {
+	position: fixed; /* Sit on top of the page content */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	top: 0; 
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+	z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+	cursor: pointer; /* Add a pointer on hover */
+}
+#credits {
+	position: absolute;
+	margin: auto;
+	background-color: white;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 50%;
+	height: 20%;
+	z-index: 3;
+	padding: 10px 20px;
+	border-radius: 5px;
+}
