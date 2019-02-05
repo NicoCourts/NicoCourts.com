@@ -1,4 +1,6 @@
-<div class='wrapper'>		
+<div class='wrapper'>	
+    <p>The blog is still under construction.</p>
+    <p>I have gotten the core functionality written for the API but still haven't decided how best to display the post list and haven't implemented the administrator interface yet.</p>	
     <div *ngFor="let p of postList" [ngClass]="p.isshort ? 'postBox-short' : 'postBox'">
         <h3 *ngIf="!p.isshort" class="postTitle">{{p.title}}</h3>
         <div [ngClass]="p.isshort ? 'postBody-short' : 'postBody'" [innerHTML]="p.body"></div>
