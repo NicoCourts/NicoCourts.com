@@ -43,4 +43,7 @@ a.nav{
 		display: block;
 		text-align: center;
 	}
+	div.postBody-short{
+		max-width: 100%;
+	}
 }
