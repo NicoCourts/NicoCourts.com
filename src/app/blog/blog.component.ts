@@ -10,9 +10,13 @@ import { RestService } from '../rest.service';
 export class BlogComponent implements OnInit {
 
   postList: Post[];
+  showCount: number;
+  startAt: number;
 
   // Read the API data and create a local data structure containing them
   constructor(public rest: RestService) {
+    this.showCount = 5;
+    this.startAt = 0;
     this.rest.getPosts().subscribe((data: Post[]) => {
       this.postList = data.reverse();
     });
@@ -36,6 +40,18 @@ export class BlogComponent implements OnInit {
                     minute:  'numeric' 
                   }
     return "Posted on " + d.toLocaleString("en-US", options)
+  } 
+
+  laterPosts() {
+    this.startAt = this.startAt + this.showCount
+  }
+
+  prevPosts() {
+    this.startAt = this.startAt - this.showCount
+  }
+
+  morePosts() : boolean {
+    return this.postList.length > this.startAt + this.showCount
   }
 
   ngOnInit() {  }

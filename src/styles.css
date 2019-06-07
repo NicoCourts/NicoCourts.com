@@ -106,11 +106,12 @@ div.postBody-short{
 	text-align:center;
 	font-size: 18pt;
 	padding: 5px 50px;
-	background-color: #ffd8aa;
+	background-color: #fff7ee;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	color: #301a00;
 	max-width: 30%;
 	display: inline-flex;
-	border-radius: 5px;
+	border-radius: 3px;
 }
 
 div.readMore{
@@ -156,9 +157,11 @@ div.flexbox{
 
 #creditSpan{
 	color: #CC3F13;
+	cursor: pointer;
 }
 #creditSpan:hover{
 	color: #136BCC;
+
 }
 
 #overlay {

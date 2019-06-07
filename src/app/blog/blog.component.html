@@ -1,10 +1,13 @@
 <div class='wrapper'>	
     <p>The blog is still under construction.</p>
-    <p>I have gotten the core functionality written for the API but still haven't decided how best to display the post list and haven't implemented the administrator interface yet.</p>	
-    <div *ngFor="let p of postList" [ngClass]="p.isshort ? 'postBox-short' : 'postBox'">
+    <p>I have gotten the core functionality written for the API but still haven't decided how best to display the post list and haven't implemented the administrator interface yet.</p>
+    <div [ngClass]="this.startAt > 0 ? 'seeMore' : 'hidden'" (click)="prevPosts()">↟See Previous Posts↟</div>
+    <div *ngFor="let p of postList | slice:startAt:startAt+showCount" [ngClass]="p.isshort ? 'postBox-short' : 'postBox'">
         <h3 *ngIf="!p.isshort" class="postTitle">{{p.title}}</h3>
         <div [ngClass]="p.isshort ? 'postBody-short' : 'postBody'" [innerHTML]="p.body"></div>
         <a href="/blog/{{p.urltitle}}"></a>
         <div *ngIf="!p.isshort" class="readMore"><a href="/blog/{{p.urltitle}}">Click to read more...</a></div>
         <div class="postFoot">{{posted(p)}}</div>
+    </div>
+    <div [ngClass]="morePosts() ? 'seeMore' : 'hidden'" (click)="laterPosts()">↶See More Posts↷</div>
 </div>
