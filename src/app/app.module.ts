@@ -11,7 +11,7 @@ import { LinksComponent } from './links/links.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostComponent } from './blog/post.component';
 import { BlogRoutingModule } from './blog/blog-routing.module';
-import { AdminComponent } from './admin/admin.component';
+//import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { AdminComponent } from './admin/admin.component';
     CoursesComponent,
     LinksComponent,
     PostComponent,
-    AdminComponent
+    //AdminComponent
   ],
   imports: [
     HttpClientModule,
