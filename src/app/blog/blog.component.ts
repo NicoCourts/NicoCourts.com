@@ -55,6 +55,8 @@ export class BlogComponent implements OnInit {
     return this.postList.length > this.startAt + this.showCount
   }
 
-  ngOnInit() {  }
+  ngOnInit() {
+
+  }
 
 }
