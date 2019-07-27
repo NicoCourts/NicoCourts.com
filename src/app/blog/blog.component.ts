@@ -17,6 +17,7 @@ export class BlogComponent implements OnInit {
   constructor(public rest: RestService) {
     this.showCount = 5;
     this.startAt = 0;
+    this.postList = [];
     this.rest.getPosts().subscribe((data: Post[]) => {
       this.postList = data.reverse();
     });
