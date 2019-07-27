@@ -24,7 +24,7 @@ export class AppComponent {
         {uri: 'resume', displayName: 'Resume/CV'},
         {uri: 'blog', displayName: 'Blog'},
         {uri: 'courses', displayName: 'Coursework'},
-        {uri: 'links', displayName: 'Links'}
+        {uri: 'links', displayName: 'Links/Writing'}
     ];
 
     isSelected(s1: string, s2: string) {
