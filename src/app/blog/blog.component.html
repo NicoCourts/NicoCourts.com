@@ -4,7 +4,7 @@
     <div [ngClass]="this.startAt > 0 ? 'seeMore' : 'hidden'" (click)="prevPosts()">↟See Previous Posts↟</div>
     <div *ngFor="let p of postList | slice:startAt:startAt+showCount" [ngClass]="p.isshort ? 'postBox-short' : 'postBox'">
         <h3 *ngIf="!p.isshort" class="postTitle">{{p.title}}</h3>
-        <div [ngClass]="p.isshort ? 'postBody-short' : 'postBody'" [innerHTML]="JSON.parse(p.body)"></div>
+        <div [ngClass]="p.isshort ? 'postBody-short' : 'postBody'" [innerHTML]="decode(p.body)"></div>
         <a href="/blog/{{p.urltitle}}"></a>
         <div *ngIf="!p.isshort" class="readMore"><a href="/blog/{{p.urltitle}}">Click to read more...</a></div>
         <div class="postFoot">{{posted(p)}}</div>

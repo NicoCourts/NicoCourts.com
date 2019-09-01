@@ -51,6 +51,10 @@ export class BlogComponent implements OnInit {
     this.startAt = this.startAt - this.showCount
   }
 
+  decode(s: string) : string {
+    return JSON.parse(s);
+  }
+
   morePosts() : boolean {
     return this.postList.length > this.startAt + this.showCount
   }

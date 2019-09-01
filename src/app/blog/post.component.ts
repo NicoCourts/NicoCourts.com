@@ -45,6 +45,10 @@ export class PostComponent implements OnInit {
     return d.toLocaleString("en-US", options)
   }
 
+  decode(s: string): string {
+    return JSON.parse(s);
+  }
+
   goBack() {
     this.location.back();
   }
