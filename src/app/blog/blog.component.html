@@ -1,6 +1,9 @@
 <div class='wrapper'>	
-    <p>The blog is still under construction.</p>
-    <p>I have gotten the core functionality written for the API but still haven't decided how best to display the post list and haven't implemented the administrator interface yet.</p>
+    <p>Thank you for visiting my website!</p>
+    <p>
+        Below you will find my blog: my random collection of thoughts on math, life, nature, politics, animals, media, and whatever else my catches my fancy at the moment.
+        I have got things close to how I want them, but there are still some moving pieces I am trying to finish here. Hopefully you don't find the user experience too atrocious while I finish things up. :)
+    </p><hr />
     <div [ngClass]="this.startAt > 0 ? 'seeMore' : 'hidden'" (click)="prevPosts()">↟See Previous Posts↟</div>
     <div *ngFor="let p of postList | slice:startAt:startAt+showCount" [ngClass]="p.isshort ? 'postBox-short' : 'postBox'">
         <h3 *ngIf="!p.isshort" class="postTitle">{{p.title}}</h3>

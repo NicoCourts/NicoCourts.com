@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Post } from './post';
 import { RestService } from '../rest.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
@@ -44,9 +44,12 @@ export class PostComponent implements OnInit {
                   }
     return d.toLocaleString("en-US", options)
   }
-
+  
   decode(s: string): string {
-    return JSON.parse(s);
+    var back = JSON.parse(s);
+    let element: HTMLElement = document.getElementById('postContent') as HTMLElement;
+    element.click();
+    return back
   }
 
   goBack() {
