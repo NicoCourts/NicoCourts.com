@@ -5,7 +5,7 @@
   </div>
   <hr />
   <div class="blogReturn"><a href="javascript:void(0)" (click)="goBack()">⇐ Return to blog listing</a></div>
-  <div id="postContent" [innerHTML]="post && decode(post.body)" onclick="MathJax.Hub.Queue(['Typeset',MathJax.Hub])">
+  <div id="postContent" [innerHTML]="post && decode(post.body)">
   </div>
   <div class="blogReturn"><a href="javascript:void(0)" (click)="goBack()">⇐ Return to blog listing</a></div>
   <hr />

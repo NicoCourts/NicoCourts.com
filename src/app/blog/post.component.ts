@@ -5,6 +5,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Location } from '@angular/common';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-post',
@@ -17,6 +18,7 @@ export class PostComponent implements OnInit {
   post: Post;
 
   constructor(
+    private sanitizer: DomSanitizer,
     private route: ActivatedRoute,
     private service: RestService,
     private location: Location
@@ -30,6 +32,7 @@ export class PostComponent implements OnInit {
 
     this.post$.subscribe((data: Post) => {
       this.post = data;
+
     });
   }
 
@@ -45,11 +48,8 @@ export class PostComponent implements OnInit {
     return d.toLocaleString("en-US", options)
   }
   
-  decode(s: string): string {
-    var back = JSON.parse(s);
-    let element: HTMLElement = document.getElementById('postContent') as HTMLElement;
-    element.click();
-    return back
+  decode(s: string): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(JSON.parse(s))
   }
 
   goBack() {
