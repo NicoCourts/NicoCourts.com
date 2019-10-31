@@ -241,3 +241,8 @@ span.caption {
 .katex {
 	font-size: 12pt;
 }
+blockquote {
+	background-color: #EEE;
+	padding: 15px;
+	font-style: italic;
+}
