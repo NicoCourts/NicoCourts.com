@@ -5,6 +5,7 @@ body{
 	font-family: CMRoman;
 	src: url("assets/CMUSerif-Roman.woff") format("woff");
 }
+
 div#content-wrapper{
 	padding: 0px;
 	border-radius:2px;
@@ -16,8 +17,8 @@ div#content-wrapper{
 	border-width:2px;
 }
 div#content{
-	font-family: "CMRoman";
-	font-size: 12pt;
+	font-family: "EB Garamond";
+	font-size: 14pt;
 	box-sizing: border-box;
 	display:inline-block;
 	width: 100%;
@@ -25,7 +26,7 @@ div#content{
 	padding: 0px;
 }
 div#header{
-	font-family: "CMRoman";
+	font-family: "EB Garamond";
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -239,7 +240,7 @@ span.caption {
     display: none; 
 }
 .katex {
-	font-size: 12pt;
+	font-size: 14pt;
 }
 blockquote {
 	background-color: #EEE;
